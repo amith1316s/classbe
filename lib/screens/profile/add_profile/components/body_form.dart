@@ -1,4 +1,6 @@
 import 'package:classbe/account.dart';
+import 'package:classbe/domain/user_profile.dart';
+import 'package:classbe/screens/home/home_screen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +12,6 @@ import 'package:classbe/constants.dart';
 import 'package:classbe/size_config.dart';
 import 'package:classbe/domain/data.dart';
 import 'package:classbe/domain/firestore_collection.dart';
-import 'package:classbe/screens/login_success/login_success_screen.dart';
 
 class BodyForm extends StatefulWidget {
   @override
@@ -94,6 +95,7 @@ class _BodyFormState extends State<BodyForm> {
   }
 
   Future<void> addUserProfile() {
+    _data.userProfile = UserProfile();
     User user = FirebaseAuth.instance.currentUser;
     _data.userProfile.uid = user.uid;
     _data.userProfile.email = user.email;
@@ -116,7 +118,7 @@ class _BodyFormState extends State<BodyForm> {
         .doc(doc)
         .set(_data.userProfile.toFirestore())
         .then((value) => {
-              Navigator.pushNamed(context, LoginSuccessScreen.routeName,
+              Navigator.pushNamed(context, HomeScreen.routeName,
                   arguments: _data)
             })
         .catchError((error) => print("Failed to add user profile: $error"));

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "451367436818",
+    "project_id": "classbe-1deb7",
+    "storage_bucket": "classbe-1deb7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:451367436818:android:00b8bcb3117607368acecb",
+        "android_client_info": {
+          "package_name": "com.alamud.classbe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "451367436818-s6b92do8aioje8eeq9tp5jin5dmi3nhd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgN8KKDXZroG2z9tEqMdCnbHnVi_5tBjA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "451367436818-s6b92do8aioje8eeq9tp5jin5dmi3nhd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

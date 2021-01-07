@@ -2,10 +2,13 @@ import 'package:classbe/navigator.dart';
 import 'package:classbe/routes.dart';
 import 'package:classbe/screens/sign_in/sign_in_screen.dart';
 import 'package:classbe/screens/theme.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:splashscreen/splashscreen.dart';
 
 Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
@@ -17,7 +20,7 @@ class MyApp extends StatelessWidget {
         FocusScope.of(context).requestFocus(new FocusNode());
       },
       child: MaterialApp(
-          title: 'Remit Mama',
+          title: 'class Be',
           theme: theme(),
           // initialRoute: SplashScreen.routeName,
           navigatorKey: NavigatorGlobalKey.navigatorKey,

@@ -1,6 +1,5 @@
 import 'package:flutter/widgets.dart';
 import 'package:classbe/screens/home/home_screen.dart';
-import 'package:classbe/screens/login_success/login_success_screen.dart';
 import 'package:classbe/screens/otp/otp_screen.dart';
 import 'package:classbe/screens/password/forgot_password/forgot_password_screen.dart';
 import 'package:classbe/screens/password/new_password/new_password_screen.dart';
@@ -22,7 +21,6 @@ final Map<String, WidgetBuilder> routes = {
   HomeScreen.routeName: (context) => HomeScreen(),
   ForgotPasswordScreen.routeName: (context) => ForgotPasswordScreen(),
   NewPasswordScreen.routeName: (context) => NewPasswordScreen(),
-  LoginSuccessScreen.routeName: (context) => LoginSuccessScreen(),
   ViewProfileScreen.routeName: (context) => ViewProfileScreen(),
   SettingsScreen.routeName: (context) => SettingsScreen(),
   EditProfileScreen.routeName: (context) => EditProfileScreen(),

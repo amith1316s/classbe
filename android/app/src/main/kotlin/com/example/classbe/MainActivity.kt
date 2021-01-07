@@ -1,4 +1,4 @@
-package com.example.classbe
+package com.alamud.classbe
 
 import io.flutter.embedding.android.FlutterActivity
 
