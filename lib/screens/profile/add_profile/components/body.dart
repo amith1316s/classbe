@@ -17,17 +17,18 @@ class Body extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                SizedBox(height: SizeConfig.screenHeight * 0.03),
+                SizedBox(height: SizeConfig.screenHeight * 0.005),
                 Text(
                   "Complete Profile",
-                  style: TextStyle(fontSize: 24, color: Colors.grey.shade700),
+                  style:headingStyle ,
                   textAlign: TextAlign.center,
                 ),
+                SizedBox(height: 10.0,),
                 Text(
                   "You're almost done, please complete your details ",
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(height: SizeConfig.screenHeight * 0.05),
+                SizedBox(height: SizeConfig.screenHeight * 0.04),
                 BodyForm(),
                 SizedBox(height: getProportionateScreenHeight(15)),
                 Text(
@@ -46,7 +47,9 @@ class Body extends StatelessWidget {
                         fontSize: getProportionateScreenWidth(15),
                         color: kPrimaryColor),
                   ),
+                   
                 ),
+                SizedBox(height:10.0,),
               ],
             ),
           ),

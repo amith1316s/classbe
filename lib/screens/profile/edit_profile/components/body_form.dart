@@ -170,7 +170,7 @@ class _BodyFormState extends State<BodyForm> {
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         prefixIcon: Padding(
           padding: EdgeInsets.only(left: 20, right: 15),
-          child: Icon(Icons.person, color: Colors.black),
+          child: Icon(Icons.person, color: Colors.cyan),
         ),
       ),
       controller: _firstNameController,
@@ -201,7 +201,7 @@ class _BodyFormState extends State<BodyForm> {
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         prefixIcon: Padding(
           padding: EdgeInsets.only(left: 20, right: 15),
-          child: Icon(Icons.person, color: Colors.black),
+          child: Icon(Icons.person, color: Colors.cyan),
         ),
       ),
       controller: _lastNameController,
@@ -219,7 +219,7 @@ class _BodyFormState extends State<BodyForm> {
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         prefixIcon: Padding(
           padding: EdgeInsets.only(left: 20, right: 15),
-          child: Icon(Icons.phone, color: Colors.black),
+          child: Icon(Icons.phone, color: Colors.cyan),
         ),
       ),
       initialCountryCode: _mobilePhoneIso,
@@ -253,7 +253,7 @@ class _BodyFormState extends State<BodyForm> {
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         prefixIcon: Padding(
           padding: EdgeInsets.only(left: 20, right: 15),
-          child: Icon(Icons.location_on, color: Colors.black),
+          child: Icon(Icons.location_on, color: Colors.cyan),
         ),
       ),
       controller: _streetController,
@@ -271,7 +271,7 @@ class _BodyFormState extends State<BodyForm> {
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         prefixIcon: Padding(
           padding: EdgeInsets.only(left: 20, right: 15),
-          child: Icon(Icons.location_city, color: Colors.black),
+          child: Icon(Icons.location_city, color: Colors.cyan),
         ),
       ),
       controller: _cityController,
@@ -289,7 +289,7 @@ class _BodyFormState extends State<BodyForm> {
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         prefixIcon: Padding(
           padding: EdgeInsets.only(left: 20, right: 15),
-          child: Icon(SocialIcons.globeAfrica, color: Colors.black),
+          child: Icon(SocialIcons.globeAfrica, color: Colors.cyan),
         ),
       ),
       controller: _countryController,
@@ -306,7 +306,7 @@ class _BodyFormState extends State<BodyForm> {
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         prefixIcon: Padding(
           padding: EdgeInsets.only(left: 20, right: 15),
-          child: Icon(SocialIcons.twitter, color: Colors.black),
+          child: Icon(SocialIcons.twitter, color: Colors.cyan),
         ),
       ),
       controller: _twitterController,
@@ -323,7 +323,7 @@ class _BodyFormState extends State<BodyForm> {
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         prefixIcon: Padding(
           padding: EdgeInsets.only(left: 20, right: 15),
-          child: Icon(SocialIcons.instagramSquare, color: Colors.black),
+          child: Icon(SocialIcons.instagramSquare, color: Colors.cyan),
         ),
       ),
       controller: _instagramController,
@@ -340,7 +340,7 @@ class _BodyFormState extends State<BodyForm> {
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         prefixIcon: Padding(
           padding: EdgeInsets.only(left: 20, right: 15),
-          child: Icon(SocialIcons.facebookSquare, color: Colors.black),
+          child: Icon(SocialIcons.facebookSquare, color: Colors.cyan),
         ),
       ),
       controller: _facebookController,

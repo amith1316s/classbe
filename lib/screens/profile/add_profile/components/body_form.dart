@@ -65,30 +65,33 @@ class _BodyFormState extends State<BodyForm> {
 
     return Form(
       key: _formKey,
-      child: Column(
-        children: [
-          buildFirstNameFormField(),
-          SizedBox(height: getProportionateScreenHeight(20)),
-          buildLastNameFormField(),
-          SizedBox(height: getProportionateScreenHeight(20)),
-          buildMobileNumberFormField(),
-          SizedBox(height: getProportionateScreenHeight(20)),
-          buildStreetFormField(),
-          SizedBox(height: getProportionateScreenHeight(20)),
-          buildCityFormField(),
-          SizedBox(height: getProportionateScreenHeight(20)),
-          buildCountryFormField(),
-          FormError(errors: errors),
-          SizedBox(height: getProportionateScreenHeight(30)),
-          DefaultButton(
-            text: "Continue",
-            press: () {
-              if (_formKey.currentState.validate()) {
-                addUserProfile();
-              }
-            },
-          ),
-        ],
+      child: Container(
+        width: 300.0,
+        child: Column(
+          children: [
+            buildFirstNameFormField(),
+            SizedBox(height: getProportionateScreenHeight(20)),
+            buildLastNameFormField(),
+            SizedBox(height: getProportionateScreenHeight(20)),
+            buildMobileNumberFormField(),
+            SizedBox(height: getProportionateScreenHeight(20)),
+            buildStreetFormField(),
+            SizedBox(height: getProportionateScreenHeight(20)),
+            buildCityFormField(),
+            SizedBox(height: getProportionateScreenHeight(20)),
+            buildCountryFormField(),
+            FormError(errors: errors),
+            SizedBox(height: getProportionateScreenHeight(30)),
+            DefaultButton(
+              text: "Continue",
+              press: () {
+                if (_formKey.currentState.validate()) {
+                  addUserProfile();
+                }
+              },
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -133,7 +136,7 @@ class _BodyFormState extends State<BodyForm> {
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         prefixIcon: Padding(
           padding: EdgeInsets.only(left: 20, right: 15),
-          child: Icon(Icons.phone, color: Colors.black),
+          child: Icon(Icons.phone, color: Colors.cyan),
         ),
       ),
       initialCountryCode: _mobilePhoneIso,
@@ -180,7 +183,7 @@ class _BodyFormState extends State<BodyForm> {
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         prefixIcon: Padding(
           padding: EdgeInsets.only(left: 20, right: 15),
-          child: Icon(Icons.person, color: Colors.black),
+          child: Icon(Icons.person, color: Colors.cyan),
         ),
       ),
       controller: _lastNameController,
@@ -211,7 +214,7 @@ class _BodyFormState extends State<BodyForm> {
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         prefixIcon: Padding(
           padding: EdgeInsets.only(left: 20, right: 15),
-          child: Icon(Icons.person, color: Colors.black),
+          child: Icon(Icons.person, color: Colors.cyan),
         ),
       ),
       controller: _firstNameController,
@@ -229,7 +232,7 @@ class _BodyFormState extends State<BodyForm> {
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         prefixIcon: Padding(
           padding: EdgeInsets.only(left: 20, right: 15),
-          child: Icon(Icons.location_on, color: Colors.black),
+          child: Icon(Icons.location_on, color: Colors.cyan),
         ),
       ),
       controller: _streetController,
@@ -247,7 +250,7 @@ class _BodyFormState extends State<BodyForm> {
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         prefixIcon: Padding(
           padding: EdgeInsets.only(left: 20, right: 15),
-          child: Icon(Icons.location_city, color: Colors.black),
+          child: Icon(Icons.location_city, color: Colors.cyan),
         ),
       ),
       controller: _cityController,
@@ -265,7 +268,7 @@ class _BodyFormState extends State<BodyForm> {
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         prefixIcon: Padding(
           padding: EdgeInsets.only(left: 20, right: 15),
-          child: Icon(SocialIcons.globeAfrica, color: Colors.black),
+          child: Icon(SocialIcons.globeAfrica, color: Colors.cyan),
         ),
       ),
       controller: _countryController,

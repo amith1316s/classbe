@@ -17,9 +17,9 @@ const kLogoSecondayColor = Color(0xFF43CCFF);
 const kAnimationDuration = Duration(milliseconds: 200);
 
 final headingStyle = TextStyle(
-  fontSize: getProportionateScreenWidth(20),
+  fontSize: getProportionateScreenWidth(16),
   fontWeight: FontWeight.bold,
-  color: Colors.deepPurple[900],
+  color: Colors.deepPurple,
   height: 1.0,
 );
 

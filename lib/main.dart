@@ -1,14 +1,14 @@
 import 'package:classbe/navigator.dart';
 import 'package:classbe/routes.dart';
-//import 'package:classbe/screens/home/home_screen.dart';
-//import 'package:classbe/screens/sign_in/sign_in_screen.dart';
+import 'package:classbe/screens/sign_in/sign_in_screen.dart';
 import 'package:classbe/screens/theme.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:splashscreen/splashscreen.dart';
-import 'package:classbe/screens/sign_in/sign_in_screen.dart';
-
 
 Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         FocusScope.of(context).requestFocus(new FocusNode());
       },
       child: MaterialApp(
-          title: 'Remit Mama',
+          title: 'class Be',
           theme: theme(),
           // initialRoute: SplashScreen.routeName,
           navigatorKey: NavigatorGlobalKey.navigatorKey,
@@ -36,7 +36,9 @@ class MyApp extends StatelessWidget {
                     color: Colors.white),
               ),
               image: new Image.asset('assets/logo_hat.png'),
-              backgroundColor: Color.fromRGBO(29, 4, 48, 1),
+             
+              
+              backgroundColor: Color.fromRGBO(5, 200, 200, 2),
               styleTextUnderTheLoader: new TextStyle(),
               photoSize: 100.0,
               loaderColor: Colors.white)),
