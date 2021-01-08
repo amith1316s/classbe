@@ -1,10 +1,10 @@
 import 'package:classbe/constants.dart';
-import 'package:classbe/screens/home/home_screen.dart';
 import 'package:classbe/size_config.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:classbe/components/default_button.dart';
 import 'package:classbe/components/form_error.dart';
+import 'package:classbe/screens/login_success/login_success_screen.dart';
 import 'package:classbe/screens/sign_up/components/sign_up_text.dart';
 
 class NewPasswordForm extends StatefulWidget {
@@ -53,7 +53,7 @@ class _NewPasswordFormState extends State<NewPasswordForm> {
                 // Do what you want to do
                 _formKey.currentState.save();
                 // if all are valid then go to success screen
-                Navigator.pushNamed(context, HomeScreen.routeName);
+                Navigator.pushNamed(context, LoginSuccessScreen.routeName);
               }
             },
           ),
