@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
               seconds: 4,
               navigateAfterSeconds: SignInScreen(),
               title: new Text(
-                'Welcome',
+                'ClassBe',
                 style: new TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 20.0,
