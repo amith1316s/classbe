@@ -136,7 +136,7 @@ class _BodyFormState extends State<BodyForm> {
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         prefixIcon: Padding(
           padding: EdgeInsets.only(left: 20, right: 15),
-          child: Icon(Icons.phone, color: Colors.cyan),
+          child: Icon(Icons.phone, color: kMainPrimaryColor),
         ),
       ),
       initialCountryCode: _mobilePhoneIso,
@@ -183,7 +183,7 @@ class _BodyFormState extends State<BodyForm> {
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         prefixIcon: Padding(
           padding: EdgeInsets.only(left: 20, right: 15),
-          child: Icon(Icons.person, color: Colors.cyan),
+          child: Icon(Icons.person, color: kMainPrimaryColor),
         ),
       ),
       controller: _lastNameController,
@@ -214,7 +214,7 @@ class _BodyFormState extends State<BodyForm> {
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         prefixIcon: Padding(
           padding: EdgeInsets.only(left: 20, right: 15),
-          child: Icon(Icons.person, color: Colors.cyan),
+          child: Icon(Icons.person, color: kMainPrimaryColor),
         ),
       ),
       controller: _firstNameController,
@@ -232,7 +232,7 @@ class _BodyFormState extends State<BodyForm> {
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         prefixIcon: Padding(
           padding: EdgeInsets.only(left: 20, right: 15),
-          child: Icon(Icons.location_on, color: Colors.cyan),
+          child: Icon(Icons.location_on, color: kMainPrimaryColor),
         ),
       ),
       controller: _streetController,
@@ -250,7 +250,7 @@ class _BodyFormState extends State<BodyForm> {
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         prefixIcon: Padding(
           padding: EdgeInsets.only(left: 20, right: 15),
-          child: Icon(Icons.location_city, color: Colors.cyan),
+          child: Icon(Icons.location_city, color: kMainPrimaryColor),
         ),
       ),
       controller: _cityController,
@@ -268,7 +268,7 @@ class _BodyFormState extends State<BodyForm> {
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         prefixIcon: Padding(
           padding: EdgeInsets.only(left: 20, right: 15),
-          child: Icon(SocialIcons.globeAfrica, color: Colors.cyan),
+          child: Icon(SocialIcons.globeAfrica, color: kMainPrimaryColor),
         ),
       ),
       controller: _countryController,

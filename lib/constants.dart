@@ -2,6 +2,7 @@ import 'package:classbe/size_config.dart';
 import 'package:flutter/material.dart';
 
 const kPrimaryColor = Colors.deepPurple;
+const kMainPrimaryColor = Color.fromRGBO(0, 153, 255, 1);
 const kPrimaryLightColor = Color(0xFFFFECDF);
 const kPrimaryGradientColor = LinearGradient(
   begin: Alignment.topLeft,

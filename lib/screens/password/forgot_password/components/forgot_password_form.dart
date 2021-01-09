@@ -61,7 +61,7 @@ class _ForgotPasswordFormState extends State<ForgotPasswordForm> {
                 floatingLabelBehavior: FloatingLabelBehavior.auto,
                 prefixIcon: Padding(
                   padding: EdgeInsets.only(left: 20, right: 15),
-                  child: Icon(Icons.email, color: Colors.cyan),
+                  child: Icon(Icons.email, color: kMainPrimaryColor),
                 ),
               ),
             ),

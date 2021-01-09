@@ -1,3 +1,4 @@
+import 'package:classbe/constants.dart';
 import 'package:classbe/navigator.dart';
 import 'package:classbe/routes.dart';
 import 'package:classbe/screens/sign_in/sign_in_screen.dart';
@@ -36,9 +37,7 @@ class MyApp extends StatelessWidget {
                     color: Colors.white),
               ),
               image: new Image.asset('assets/logo_hat.png'),
-             
-              
-              backgroundColor: Color.fromRGBO(5, 200, 200, 2),
+              backgroundColor: kMainPrimaryColor,
               styleTextUnderTheLoader: new TextStyle(),
               photoSize: 100.0,
               loaderColor: Colors.white)),

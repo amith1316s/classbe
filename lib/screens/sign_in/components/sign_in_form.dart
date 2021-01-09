@@ -76,7 +76,7 @@ class _SignInFormState extends State<SignInForm> {
                   children: [
                     Checkbox(
                       value: _remember,
-                      activeColor: Colors.cyan,
+                      activeColor: kMainPrimaryColor,
                       onChanged: (value) {
                         setState(() {
                           _remember = value;
@@ -86,16 +86,16 @@ class _SignInFormState extends State<SignInForm> {
                     Text("Remember me"),
                     Spacer(),
                     GestureDetector(
-                      onTap: () => Navigator.pushNamed(
-                          context, ForgotPasswordScreen.routeName),
-                      child: Text(
-                        "Forgot Password?",
-                        style: TextStyle(
+                        onTap: () => Navigator.pushNamed(
+                            context, ForgotPasswordScreen.routeName),
+                        child: Text(
+                          "Forgot Password?",
+                          style: TextStyle(
                             fontSize: getProportionateScreenWidth(15),
                             color: Colors.deepPurple[900],
-                      ),
-                    )
-                    )],
+                          ),
+                        ))
+                  ],
                 ),
               ),
               FormError(errors: _errors),
@@ -114,21 +114,17 @@ class _SignInFormState extends State<SignInForm> {
                 ),
               ),
               SizedBox(height: getProportionateScreenHeight(3)),
-              _buildSignInWithText(),
-             SizedBox(height: getProportionateScreenHeight(5)),
-               SignInButton(
-                Buttons.Google,
-                onPressed: () {
-                  _signInWithGoogle();
-                },
-              ), 
-             
+              //   _buildSignInWithText(),
+              //  SizedBox(height: getProportionateScreenHeight(5)),
+              //    SignInButton(
+              //     Buttons.Google,
+              //     onPressed: () {
+              //       _signInWithGoogle();
+              //     },
+              //   ),
             ],
-           
           ),
-           
         ));
-        
   }
 
   void emailVerification() async {
@@ -200,7 +196,7 @@ class _SignInFormState extends State<SignInForm> {
     ));
   }
 
- TextFormField buildPasswordFormField() {
+  TextFormField buildPasswordFormField() {
     return TextFormField(
       obscureText: true,
       onChanged: (value) {
@@ -229,7 +225,7 @@ class _SignInFormState extends State<SignInForm> {
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         prefixIcon: Padding(
           padding: EdgeInsets.only(left: 20, right: 15),
-          child: Icon(Icons.phonelink_lock, color: Colors.cyan),
+          child: Icon(Icons.phonelink_lock, color: kMainPrimaryColor),
         ),
       ),
       controller: _passwordController,
@@ -260,21 +256,21 @@ class _SignInFormState extends State<SignInForm> {
       decoration: InputDecoration(
         labelText: "Email",
         hintText: "Enter your email",
-      
+
         // If  you are using latest version of flutter then label text and hint text shown like this
         // if you r using flutter less then 1.20.* then maybe this is not working properly
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         prefixIcon: Padding(
           padding: EdgeInsets.only(left: 20, right: 15),
-          child: Icon(Icons.email_rounded, color: Colors.cyan),
+          child: Icon(Icons.email_rounded, color: kMainPrimaryColor),
         ),
       ),
       controller: _emailController,
     );
   }
-} 
+}
 
- /*  Widget buildEmailFormField() {
+/*  Widget buildEmailFormField() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -308,7 +304,7 @@ class _SignInFormState extends State<SignInForm> {
               contentPadding: EdgeInsets.only(top: 14.0),
               prefixIcon: Icon(
                 Icons.email_rounded,
-                color: Colors.cyan,
+                color: kMainPrimaryColor,
               ),
               // If  you are using latest version of flutter then lable text and hint text shown like this
               // if you r using flutter less then 1.20.* then maybe this is not working properly
@@ -359,7 +355,7 @@ Widget _buildPasswordTF() {
   );
 } */
 
- /* Widget _buildSocialBtn(Function onTap, AssetImage logo) {
+/* Widget _buildSocialBtn(Function onTap, AssetImage logo) {
   return GestureDetector(
     onTap: () => onTap,
     child: Container(

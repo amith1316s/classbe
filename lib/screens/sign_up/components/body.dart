@@ -24,12 +24,11 @@ class Body extends StatelessWidget {
                   width: 220.0,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15.0),
-                      border: Border.all(
-                          color: Colors.cyanAccent[400], width: 2.0)),
+                      border: Border.all(color: kMainPrimaryColor, width: 2.0)),
                   child: Container(
                     decoration: new BoxDecoration(
                       borderRadius: BorderRadius.circular(15.0),
-                      color: Colors.cyanAccent[700],
+                      color: kMainPrimaryColor,
                     ),
                     child: Row(
                       children: [
@@ -62,7 +61,6 @@ class Body extends StatelessWidget {
                       context, TermsAndConditionsScreen.routeName),
                   child: Text(
                     "Terms and Condition",
-                    
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         fontWeight: FontWeight.bold,

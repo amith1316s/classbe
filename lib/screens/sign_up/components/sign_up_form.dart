@@ -67,13 +67,13 @@ class _SignUpFormState extends State<SignUpForm> {
                 }
               },
             ),
-            SizedBox(height: getProportionateScreenHeight(30)),
-            SignInButton(
-              Buttons.Google,
-              onPressed: () {
-                _signInWithGoogle();
-              },
-            ),
+            // SizedBox(height: getProportionateScreenHeight(30)),
+            // SignInButton(
+            //   Buttons.Google,
+            //   onPressed: () {
+            //     _signInWithGoogle();
+            //   },
+            // ),
           ],
         ),
       ),
@@ -177,7 +177,7 @@ class _SignUpFormState extends State<SignUpForm> {
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         prefixIcon: Padding(
           padding: EdgeInsets.only(left: 20, right: 15),
-          child: Icon(Icons.email, color: Colors.cyan),
+          child: Icon(Icons.email, color: kMainPrimaryColor),
         ),
       ),
       controller: _emailController,
@@ -214,7 +214,7 @@ class _SignUpFormState extends State<SignUpForm> {
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         prefixIcon: Padding(
           padding: EdgeInsets.only(left: 20, right: 15),
-          child: Icon(Icons.phonelink_lock, color: Colors.cyan),
+          child: Icon(Icons.phonelink_lock, color: kMainPrimaryColor),
         ),
       ),
       controller: _passwordController,
@@ -251,7 +251,7 @@ class _SignUpFormState extends State<SignUpForm> {
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         prefixIcon: Padding(
           padding: EdgeInsets.only(left: 20, right: 15),
-          child: Icon(Icons.phonelink_lock, color: Colors.cyan),
+          child: Icon(Icons.phonelink_lock, color: kMainPrimaryColor),
         ),
       ),
       controller: _confirmPasswordController,
