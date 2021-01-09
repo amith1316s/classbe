@@ -1,6 +1,4 @@
 import 'package:classbe/account.dart';
-import 'package:classbe/domain/user_profile.dart';
-import 'package:classbe/screens/home/home_screen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -12,6 +10,7 @@ import 'package:classbe/constants.dart';
 import 'package:classbe/size_config.dart';
 import 'package:classbe/domain/data.dart';
 import 'package:classbe/domain/firestore_collection.dart';
+import 'package:classbe/screens/login_success/login_success_screen.dart';
 
 class BodyForm extends StatefulWidget {
   @override
@@ -66,36 +65,38 @@ class _BodyFormState extends State<BodyForm> {
 
     return Form(
       key: _formKey,
-      child: Column(
-        children: [
-          buildFirstNameFormField(),
-          SizedBox(height: getProportionateScreenHeight(20)),
-          buildLastNameFormField(),
-          SizedBox(height: getProportionateScreenHeight(20)),
-          buildMobileNumberFormField(),
-          SizedBox(height: getProportionateScreenHeight(20)),
-          buildStreetFormField(),
-          SizedBox(height: getProportionateScreenHeight(20)),
-          buildCityFormField(),
-          SizedBox(height: getProportionateScreenHeight(20)),
-          buildCountryFormField(),
-          FormError(errors: errors),
-          SizedBox(height: getProportionateScreenHeight(30)),
-          DefaultButton(
-            text: "Continue",
-            press: () {
-              if (_formKey.currentState.validate()) {
-                addUserProfile();
-              }
-            },
-          ),
-        ],
+      child: Container(
+        width: 300.0,
+        child: Column(
+          children: [
+            buildFirstNameFormField(),
+            SizedBox(height: getProportionateScreenHeight(20)),
+            buildLastNameFormField(),
+            SizedBox(height: getProportionateScreenHeight(20)),
+            buildMobileNumberFormField(),
+            SizedBox(height: getProportionateScreenHeight(20)),
+            buildStreetFormField(),
+            SizedBox(height: getProportionateScreenHeight(20)),
+            buildCityFormField(),
+            SizedBox(height: getProportionateScreenHeight(20)),
+            buildCountryFormField(),
+            FormError(errors: errors),
+            SizedBox(height: getProportionateScreenHeight(30)),
+            DefaultButton(
+              text: "Continue",
+              press: () {
+                if (_formKey.currentState.validate()) {
+                  addUserProfile();
+                }
+              },
+            ),
+          ],
+        ),
       ),
     );
   }
 
   Future<void> addUserProfile() {
-    _data.userProfile = UserProfile();
     User user = FirebaseAuth.instance.currentUser;
     _data.userProfile.uid = user.uid;
     _data.userProfile.email = user.email;
@@ -118,7 +119,7 @@ class _BodyFormState extends State<BodyForm> {
         .doc(doc)
         .set(_data.userProfile.toFirestore())
         .then((value) => {
-              Navigator.pushNamed(context, HomeScreen.routeName,
+              Navigator.pushNamed(context, LoginSuccessScreen.routeName,
                   arguments: _data)
             })
         .catchError((error) => print("Failed to add user profile: $error"));
@@ -135,7 +136,7 @@ class _BodyFormState extends State<BodyForm> {
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         prefixIcon: Padding(
           padding: EdgeInsets.only(left: 20, right: 15),
-          child: Icon(Icons.phone, color: Colors.black),
+          child: Icon(Icons.phone, color: Colors.cyan),
         ),
       ),
       initialCountryCode: _mobilePhoneIso,
@@ -182,7 +183,7 @@ class _BodyFormState extends State<BodyForm> {
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         prefixIcon: Padding(
           padding: EdgeInsets.only(left: 20, right: 15),
-          child: Icon(Icons.person, color: Colors.black),
+          child: Icon(Icons.person, color: Colors.cyan),
         ),
       ),
       controller: _lastNameController,
@@ -213,7 +214,7 @@ class _BodyFormState extends State<BodyForm> {
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         prefixIcon: Padding(
           padding: EdgeInsets.only(left: 20, right: 15),
-          child: Icon(Icons.person, color: Colors.black),
+          child: Icon(Icons.person, color: Colors.cyan),
         ),
       ),
       controller: _firstNameController,
@@ -231,7 +232,7 @@ class _BodyFormState extends State<BodyForm> {
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         prefixIcon: Padding(
           padding: EdgeInsets.only(left: 20, right: 15),
-          child: Icon(Icons.location_on, color: Colors.black),
+          child: Icon(Icons.location_on, color: Colors.cyan),
         ),
       ),
       controller: _streetController,
@@ -249,7 +250,7 @@ class _BodyFormState extends State<BodyForm> {
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         prefixIcon: Padding(
           padding: EdgeInsets.only(left: 20, right: 15),
-          child: Icon(Icons.location_city, color: Colors.black),
+          child: Icon(Icons.location_city, color: Colors.cyan),
         ),
       ),
       controller: _cityController,
@@ -267,7 +268,7 @@ class _BodyFormState extends State<BodyForm> {
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         prefixIcon: Padding(
           padding: EdgeInsets.only(left: 20, right: 15),
-          child: Icon(SocialIcons.globeAfrica, color: Colors.black),
+          child: Icon(SocialIcons.globeAfrica, color: Colors.cyan),
         ),
       ),
       controller: _countryController,

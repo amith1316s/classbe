@@ -36,7 +36,9 @@ class MyApp extends StatelessWidget {
                     color: Colors.white),
               ),
               image: new Image.asset('assets/logo_hat.png'),
-              backgroundColor: Color.fromRGBO(29, 4, 48, 1),
+             
+              
+              backgroundColor: Color.fromRGBO(5, 200, 200, 2),
               styleTextUnderTheLoader: new TextStyle(),
               photoSize: 100.0,
               loaderColor: Colors.white)),

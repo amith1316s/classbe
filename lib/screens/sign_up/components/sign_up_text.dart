@@ -15,7 +15,7 @@ class SignUpText extends StatelessWidget {
       children: [
         Text(
           "Don’t have an account? ",
-          style: TextStyle(fontSize: getProportionateScreenWidth(16)),
+          style: TextStyle(fontSize: getProportionateScreenWidth(16),fontWeight: FontWeight.bold),
         ),
         GestureDetector(
           onTap: () => Navigator.pushNamed(context, SignUpScreen.routeName),
@@ -23,6 +23,7 @@ class SignUpText extends StatelessWidget {
             "Sign Up",
             style: TextStyle(
                 fontSize: getProportionateScreenWidth(16),
+                fontWeight: FontWeight.bold,
                 color: kPrimaryColor),
           ),
         ),

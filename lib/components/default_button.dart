@@ -14,8 +14,8 @@ class DefaultButton extends StatelessWidget {
       width: double.infinity,
       height: height,
       child: RaisedButton(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-        color: kPrimaryColor,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+        color: Colors.cyan,
         onPressed: press,
         child: Text(
           text,

@@ -47,32 +47,35 @@ class _SignUpFormState extends State<SignUpForm> {
   Widget build(BuildContext context) {
     return Form(
       key: _formKey,
-      child: Column(
-        children: [
-          buildEmailFormField(),
-          SizedBox(height: getProportionateScreenHeight(20)),
-          buildPasswordFormField(),
-          SizedBox(height: getProportionateScreenHeight(20)),
-          buildConfirmPasswordFormField(),
-          FormError(errors: _errors),
-          SizedBox(height: getProportionateScreenHeight(30)),
-          DefaultButton(
-            text: "Continue",
-            press: () {
-              if (_formKey.currentState.validate()) {
-                _formKey.currentState.save();
-                _signUp();
-              }
-            },
-          ),
-          SizedBox(height: getProportionateScreenHeight(30)),
-          SignInButton(
-            Buttons.Google,
-            onPressed: () {
-              _signInWithGoogle();
-            },
-          ),
-        ],
+      child: Container(
+        width: 300.0,
+        child: Column(
+          children: [
+            buildEmailFormField(),
+            SizedBox(height: getProportionateScreenHeight(20)),
+            buildPasswordFormField(),
+            SizedBox(height: getProportionateScreenHeight(20)),
+            buildConfirmPasswordFormField(),
+            FormError(errors: _errors),
+            SizedBox(height: getProportionateScreenHeight(30)),
+            DefaultButton(
+              text: "Continue",
+              press: () {
+                if (_formKey.currentState.validate()) {
+                  _formKey.currentState.save();
+                  _signUp();
+                }
+              },
+            ),
+            SizedBox(height: getProportionateScreenHeight(30)),
+            SignInButton(
+              Buttons.Google,
+              onPressed: () {
+                _signInWithGoogle();
+              },
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -174,7 +177,7 @@ class _SignUpFormState extends State<SignUpForm> {
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         prefixIcon: Padding(
           padding: EdgeInsets.only(left: 20, right: 15),
-          child: Icon(Icons.email, color: Colors.black),
+          child: Icon(Icons.email, color: Colors.cyan),
         ),
       ),
       controller: _emailController,
@@ -211,7 +214,7 @@ class _SignUpFormState extends State<SignUpForm> {
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         prefixIcon: Padding(
           padding: EdgeInsets.only(left: 20, right: 15),
-          child: Icon(Icons.phonelink_lock, color: Colors.black),
+          child: Icon(Icons.phonelink_lock, color: Colors.cyan),
         ),
       ),
       controller: _passwordController,
@@ -248,7 +251,7 @@ class _SignUpFormState extends State<SignUpForm> {
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         prefixIcon: Padding(
           padding: EdgeInsets.only(left: 20, right: 15),
-          child: Icon(Icons.phonelink_lock, color: Colors.black),
+          child: Icon(Icons.phonelink_lock, color: Colors.cyan),
         ),
       ),
       controller: _confirmPasswordController,

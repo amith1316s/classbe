@@ -17,11 +17,37 @@ class Body extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(height: SizeConfig.screenHeight * 0.03), // 4%
-                Text("Register Account", style: headingStyle),
-                Text(
-                  "Complete your details or continue \nwith Social Sign In",
-                  textAlign: TextAlign.center,
+                Text("Sign up", style: headingStyle),
+                SizedBox(height: 10.0),
+                Container(
+                  height: 80.0,
+                  width: 220.0,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15.0),
+                      border: Border.all(
+                          color: Colors.cyanAccent[400], width: 2.0)),
+                  child: Container(
+                    decoration: new BoxDecoration(
+                      borderRadius: BorderRadius.circular(15.0),
+                      color: Colors.cyanAccent[700],
+                    ),
+                    child: Row(
+                      children: [
+                        Image.asset(
+                          'assets/logo_hat.png',
+                          width: 100,
+                          height: 100,
+                        ),
+                        Image.asset(
+                          'assets/logo_name.png',
+                          width: 100,
+                          height: 100,
+                        )
+                      ],
+                    ),
+                  ),
                 ),
+
                 SizedBox(height: SizeConfig.screenHeight * 0.05),
                 SignUpForm(),
                 SizedBox(height: SizeConfig.screenHeight * 0.05),
@@ -36,8 +62,10 @@ class Body extends StatelessWidget {
                       context, TermsAndConditionsScreen.routeName),
                   child: Text(
                     "Terms and Condition",
+                    
                     textAlign: TextAlign.center,
                     style: TextStyle(
+                        fontWeight: FontWeight.bold,
                         fontSize: getProportionateScreenWidth(15),
                         color: kPrimaryColor),
                   ),

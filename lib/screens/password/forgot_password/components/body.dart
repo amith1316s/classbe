@@ -1,6 +1,7 @@
 import 'package:classbe/size_config.dart';
 import 'package:flutter/material.dart';
 import 'forgot_password_form.dart';
+import 'package:classbe/constants.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -16,15 +17,13 @@ class Body extends StatelessWidget {
               SizedBox(height: SizeConfig.screenHeight * 0.04),
               Text(
                 "Forgot Password",
-                style: TextStyle(
-                  fontSize: getProportionateScreenWidth(28),
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
+                style: headingStyle),
+              SizedBox(height: 30.0,),
               Text(
                 "Please enter your email and we will send \nyou a link to return to your account",
                 textAlign: TextAlign.center,
+                
+            
               ),
               SizedBox(height: SizeConfig.screenHeight * 0.1),
               ForgotPasswordForm(),

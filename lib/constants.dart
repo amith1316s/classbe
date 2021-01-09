@@ -1,7 +1,7 @@
 import 'package:classbe/size_config.dart';
 import 'package:flutter/material.dart';
 
-const kPrimaryColor = Color(0xFFFF7643);
+const kPrimaryColor = Colors.deepPurple;
 const kPrimaryLightColor = Color(0xFFFFECDF);
 const kPrimaryGradientColor = LinearGradient(
   begin: Alignment.topLeft,
@@ -17,10 +17,10 @@ const kLogoSecondayColor = Color(0xFF43CCFF);
 const kAnimationDuration = Duration(milliseconds: 200);
 
 final headingStyle = TextStyle(
-  fontSize: getProportionateScreenWidth(28),
+  fontSize: getProportionateScreenWidth(16),
   fontWeight: FontWeight.bold,
-  color: Colors.black,
-  height: 1.5,
+  color: Colors.deepPurple,
+  height: 1.0,
 );
 
 const defaultDuration = Duration(milliseconds: 250);
