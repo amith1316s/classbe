@@ -23,7 +23,9 @@ class HomeScreen extends StatelessWidget {
                   color: Colors.cyan,
                   size: 30.0,
                 ),
+                
               )),
+              SizedBox(width: 30.0,),
         ],
       ),
       drawer: Menu(),
