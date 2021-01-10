@@ -11,6 +11,7 @@ class FirestoreField {
   static const String uid = "uid";
   static const String first_name = "first_name";
   static const String last_name = "last_name";
+  static const String role = "role";
 
   static const String address = "address";
   static const String street = "street";

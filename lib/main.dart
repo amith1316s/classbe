@@ -1,6 +1,7 @@
 import 'package:classbe/constants.dart';
 import 'package:classbe/navigator.dart';
 import 'package:classbe/routes.dart';
+import 'package:classbe/screens/info/intro.dart';
 import 'package:classbe/screens/sign_in/sign_in_screen.dart';
 import 'package:classbe/screens/theme.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
           routes: routes,
           home: SplashScreen(
               seconds: 4,
-              navigateAfterSeconds: SignInScreen(),
+              navigateAfterSeconds: OnBoardingPage(),
               title: new Text(
                 'ClassBe',
                 style: new TextStyle(

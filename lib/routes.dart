@@ -1,3 +1,4 @@
+import 'package:classbe/screens/calender/calender.dart';
 import 'package:flutter/widgets.dart';
 import 'package:classbe/screens/home/home_screen.dart';
 import 'package:classbe/screens/otp/otp_screen.dart';
@@ -25,4 +26,5 @@ final Map<String, WidgetBuilder> routes = {
   SettingsScreen.routeName: (context) => SettingsScreen(),
   EditProfileScreen.routeName: (context) => EditProfileScreen(),
   VerificationScreen.routeName: (context) => VerificationScreen(),
+  Calender.routeName: (context) => Calender()
 };
