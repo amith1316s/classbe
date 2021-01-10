@@ -29,117 +29,114 @@ class _BodyStatefulWidget extends State<Menu> {
   @override
   Widget build(BuildContext context) {
     _data = ModalRoute.of(context).settings.arguments;
-    return ClipPath(
-      clipper: OvalRightBorderClipper(),
-      child: Container(
-        padding: const EdgeInsets.only(left: 16.0, right: 40),
-        decoration: BoxDecoration(
-            color: primary, boxShadow: [BoxShadow(color: Colors.black45)]),
-        width: 280,
-        height: double.infinity,
-        child: SafeArea(
-          child: SingleChildScrollView(
-            child: Column(
-              children: <Widget>[
-                Container(
-                  alignment: Alignment.centerRight,
-                  child: IconButton(
-                    icon: Icon(
-                      Icons.exit_to_app,
-                      color: active,
-                    ),
-                    onPressed: () {
-                      _signOut(context);
-                    },
+    return Container(
+      padding: const EdgeInsets.only(left: 16.0, right: 40),
+      decoration: BoxDecoration(
+          color: primary, boxShadow: [BoxShadow(color: Colors.black45)]),
+      width: 280,
+      height: double.infinity,
+      child: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              Container(
+                alignment: Alignment.centerRight,
+                child: IconButton(
+                  icon: Icon(
+                    Icons.exit_to_app,
+                    color: active,
                   ),
-                ),
-                Container(
-                  height: 100,
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      gradient: LinearGradient(
-                          colors: [kPrimaryLightColor, kPrimaryColor])),
-                  child: GestureDetector(
-                    child: _data.userProfile.imageUrl == null
-                        ? CircleAvatar(
-                            radius: 45,
-                            child: Icon(Icons.add_a_photo),
-                          )
-                        : CircleAvatar(
-                            radius: 45,
-                            backgroundImage:
-                                NetworkImage(_data.userProfile.imageUrl),
-                          ),
-                    onTap: () async {
-                      PickedFile image = await ImagePicker().getImage(
-                        source: ImageSource.gallery,
-                      );
-                      print(image.path);
-
-                      await CommonEvent.uploadFile(image, _data);
-                      setState(() {});
-                    },
-                  ),
-                ),
-                SizedBox(height: 5.0),
-                Text(
-                  _data.userProfile.firstName.capitalize() +
-                      ' ' +
-                      _data.userProfile.lastName.capitalize(),
-                  style: TextStyle(
-                      color: kPrimaryColor,
-                      fontSize: 18.0,
-                      fontWeight: FontWeight.w600),
-                ),
-                SizedBox(height: 20.0),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.pop(context);
-                  },
-                  child: _buildRow(Icons.home, "Home"),
-                ),
-                _buildDivider(),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.popAndPushNamed(
-                        context, ViewProfileScreen.routeName,
-                        arguments: _data);
-                  },
-                  child: _buildRow(Icons.person_pin_rounded, "My Profile"),
-                ),
-                _buildDivider(),
-                GestureDetector(
-                  onTap: () {
-                    //Navigator.pushNamed(context, ViewProfileScreen.routeName);
-                  },
-                  child: _buildRow(Icons.message, "Messages", showBadge: true),
-                ),
-                _buildDivider(),
-                GestureDetector(
-                  onTap: () {
-                    //Navigator.pushNamed(context, ViewProfileScreen.routeName);
-                  },
-                  child: _buildRow(Icons.notifications, "Notifications",
-                      showBadge: true),
-                ),
-                _buildDivider(),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.pushNamed(context, SettingsScreen.routeName);
-                  },
-                  child: _buildRow(Icons.settings, "Settings"),
-                ),
-                _buildDivider(),
-                GestureDetector(
-                  onTap: () {
+                  onPressed: () {
                     _signOut(context);
                   },
-                  child: _buildRow(Icons.exit_to_app, "Sign Out"),
                 ),
-                _buildDivider(),
-              ],
-            ),
+              ),
+              Container(
+                height: 100,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    gradient: LinearGradient(
+                        colors: [kPrimaryLightColor, kPrimaryColor])),
+                child: GestureDetector(
+                  child: _data.userProfile.imageUrl == null
+                      ? CircleAvatar(
+                          radius: 45,
+                          child: Icon(Icons.add_a_photo),
+                        )
+                      : CircleAvatar(
+                          radius: 45,
+                          backgroundImage:
+                              NetworkImage(_data.userProfile.imageUrl),
+                        ),
+                  onTap: () async {
+                    PickedFile image = await ImagePicker().getImage(
+                      source: ImageSource.gallery,
+                    );
+                    print(image.path);
+
+                    await CommonEvent.uploadFile(image, _data);
+                    setState(() {});
+                  },
+                ),
+              ),
+              SizedBox(height: 5.0),
+              Text(
+                _data.userProfile.firstName.capitalize() +
+                    ' ' +
+                    _data.userProfile.lastName.capitalize(),
+                style: TextStyle(
+                    color: kPrimaryColor,
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.w600),
+              ),
+              SizedBox(height: 20.0),
+              GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: _buildRow(Icons.home, "Home"),
+              ),
+              _buildDivider(),
+              GestureDetector(
+                onTap: () {
+                  Navigator.popAndPushNamed(
+                      context, ViewProfileScreen.routeName,
+                      arguments: _data);
+                },
+                child: _buildRow(Icons.person_pin_rounded, "My Profile"),
+              ),
+              _buildDivider(),
+              GestureDetector(
+                onTap: () {
+                  //Navigator.pushNamed(context, ViewProfileScreen.routeName);
+                },
+                child: _buildRow(Icons.message, "Messages", showBadge: true),
+              ),
+              _buildDivider(),
+              GestureDetector(
+                onTap: () {
+                  //Navigator.pushNamed(context, ViewProfileScreen.routeName);
+                },
+                child: _buildRow(Icons.notifications, "Notifications",
+                    showBadge: true),
+              ),
+              _buildDivider(),
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, SettingsScreen.routeName);
+                },
+                child: _buildRow(Icons.settings, "Settings"),
+              ),
+              _buildDivider(),
+              GestureDetector(
+                onTap: () {
+                  _signOut(context);
+                },
+                child: _buildRow(Icons.exit_to_app, "Sign Out"),
+              ),
+              _buildDivider(),
+            ],
           ),
         ),
       ),

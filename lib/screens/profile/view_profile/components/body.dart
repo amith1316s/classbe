@@ -17,7 +17,6 @@ class Body extends StatefulWidget {
 }
 
 class _BodyStatefulWidget extends State<Body> {
-  final imagebackground = 'assets/images/landscape.png';
   final image = 'assets/images/profile.jpg';
   final camera = 'assets/icons/camera.png';
   Data _data;
@@ -31,10 +30,6 @@ class _BodyStatefulWidget extends State<Body> {
       body: SingleChildScrollView(
         child: Stack(
           children: <Widget>[
-            SizedBox(
-                height: 250,
-                width: double.maxFinite,
-                child: Image.asset(imagebackground, fit: BoxFit.cover)),
             Container(
               margin: EdgeInsets.fromLTRB(16.0, 95.0, 16.0, 16.0),
               child: Column(

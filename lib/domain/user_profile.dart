@@ -12,6 +12,7 @@ class UserProfile {
       facebook,
       instagram,
       account,
+      role,
       imageUrl;
 
   MobilePhone mobilePhone = MobilePhone();
@@ -24,6 +25,7 @@ class UserProfile {
   UserProfile.fromFirestore(Map<String, dynamic> data) {
     uid = data[FirestoreField.profile][FirestoreField.uid];
     email = data[FirestoreField.profile][FirestoreField.email];
+    role = data[FirestoreField.profile][FirestoreField.role];
     firstName = data[FirestoreField.profile][FirestoreField.first_name];
     lastName = data[FirestoreField.profile][FirestoreField.last_name];
     mobilePhone.iso = data[FirestoreField.profile][FirestoreField.mobile_phone]
@@ -58,6 +60,7 @@ class UserProfile {
       FirestoreField.profile: {
         FirestoreField.uid: uid,
         FirestoreField.email: email,
+        FirestoreField.role: role,
         FirestoreField.first_name: firstName,
         FirestoreField.last_name: lastName,
         FirestoreField.address: {

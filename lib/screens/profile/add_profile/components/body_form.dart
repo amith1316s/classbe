@@ -35,6 +35,8 @@ class _BodyFormState extends State<BodyForm> {
   String _mobilePhoneIso = 'GB';
   String _mobilePhoneCode;
 
+  String role = 'Student';
+
   void addError({String error}) {
     if (!errors.contains(error))
       setState(() {
@@ -70,6 +72,32 @@ class _BodyFormState extends State<BodyForm> {
         width: 300.0,
         child: Column(
           children: [
+            Row(children: [
+              Radio(
+                value: 'Student',
+                groupValue: role,
+                onChanged: (value) {
+                  setState(() {
+                    role = value;
+                  });
+                },
+              ),
+              Text("Student"),
+              SizedBox(
+                width: 10,
+              ),
+              Radio(
+                value: 'Teacher',
+                groupValue: role,
+                onChanged: (value) {
+                  setState(() {
+                    role = value;
+                  });
+                },
+              ),
+              Text("Teacher"),
+            ]),
+            SizedBox(height: getProportionateScreenHeight(20)),
             buildFirstNameFormField(),
             SizedBox(height: getProportionateScreenHeight(20)),
             buildLastNameFormField(),
@@ -102,6 +130,7 @@ class _BodyFormState extends State<BodyForm> {
     User user = FirebaseAuth.instance.currentUser;
     _data.userProfile.uid = user.uid;
     _data.userProfile.email = user.email;
+    _data.userProfile.role = role;
     _data.userProfile.firstName = _firstNameController.text;
     _data.userProfile.lastName = _lastNameController.text;
     _data.userProfile.mobilePhone.iso = _mobilePhoneIso;

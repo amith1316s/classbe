@@ -14,7 +14,7 @@ class Loader {
               child: Container(
                 key: key,
                 child: SpinKitFadingCube(
-                  color: kPrimaryColor,
+                  color: kMainPrimaryColor,
                   size: 50.0,
                 ),
               ));
