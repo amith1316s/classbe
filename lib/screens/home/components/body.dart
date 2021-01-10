@@ -1,13 +1,35 @@
 import 'package:flutter/material.dart';
-import 'package:classbe/constants.dart';
+import '../../../models/category.dart';
+//import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import '../../../constants.dart';
+
+import '../../../size_config.dart';
+import 'categories.dart';
+import 'discount_banner.dart';
+import 'home_header.dart';
+import 'popular_product.dart';
+import 'special_offers.dart';
 
 class Body extends StatelessWidget {
-  final Color primary = Colors.white;
-  final Color active = Colors.grey.shade800;
-  final Color divider = kPrimaryLightColor;
-
   @override
   Widget build(BuildContext context) {
-    return Container(color: Colors.grey.shade300, child: Text('Welcome Home'));
+    return SafeArea(
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            SizedBox(height: getProportionateScreenHeight(5)),
+            HomeHeader(),
+            SizedBox(height: getProportionateScreenWidth(0.5)),
+            DiscountBanner(),
+            //Categories(),
+            
+              SpecialOffers(),
+             SizedBox(height: getProportionateScreenWidth(30)),
+            //PopularProducts(), 
+             //SizedBox(height: getProportionateScreenWidth(30)), 
+          ],
+        ),
+      ),
+    );
   }
-}
+}  
