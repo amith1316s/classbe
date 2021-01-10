@@ -1,5 +1,7 @@
 import 'package:classbe/screens/home/components/menu.dart';
 import 'package:flutter/material.dart';
+import 'package:classbe/components/coustom_bottom_nav_bar.dart';
+import 'package:classbe/enums.dart';
 
 import 'components/body.dart';
 
@@ -18,13 +20,17 @@ class HomeScreen extends StatelessWidget {
                 onTap: () {},
                 child: Icon(
                   Icons.home_rounded,
+                  color: Colors.cyan,
                   size: 30.0,
                 ),
+                
               )),
+              SizedBox(width: 30.0,),
         ],
       ),
       drawer: Menu(),
       body: Body(),
+      bottomNavigationBar: CustomBottomNavBar(selectedMenu: MenuState.home),
     );
   }
 }
