@@ -28,7 +28,7 @@ class HomeScreen extends StatelessWidget {
       ),
       drawer: Menu(),
       body: Body(),
-       bottomNavigationBar: CustomBottomNavBar(selectedMenu: MenuState.home),
+      bottomNavigationBar: CustomBottomNavBar(selectedMenu: MenuState.home),
     );
   }
 }

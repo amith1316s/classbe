@@ -57,17 +57,23 @@ class CustomBottomNavBar extends StatelessWidget {
                 icon: SvgPicture.asset("assets/Chat bubble Icon.svg"),
                 onPressed: () {},
               ),
-              IconButton(
+               IconButton(
+                icon: SvgPicture.asset("assets/Chat bubble Icon.svg"),
+                onPressed: () {},
+              ),
+
+              /* IconButton(
                 icon: SvgPicture.asset(
                   "assets/User Icon.svg",
-                  color: MenuState.profile == selectedMenu
+                   color: MenuState.profile == selectedMenu
                       ? kPrimaryColor
-                      : inActiveIconColor,
-                ),
+                      : inActiveIconColor, 
+                    
+                ), */
               /*   onPressed: () =>
                     Navigator.pushNamed(context, ProfileScreen.routeName),
               ), */
-              ),
+              
             ],
           )),
     );
