@@ -36,6 +36,7 @@ class SpecialOffers extends StatelessWidget {
                 category: "My Cources",
                 numOfBrands: 24,
                 press: () {},
+                
               ),
               SizedBox(width: getProportionateScreenWidth(20)),
             ],
@@ -52,6 +53,7 @@ class SpecialOffers extends StatelessWidget {
                 category: "Calender",
                 numOfBrands: 18,
                 press: () {},
+
               ),
               SpecialOfferCard(
                image: "assets/subscription.png",
@@ -76,6 +78,8 @@ class SpecialOfferCard extends StatelessWidget {
     @required this.image,
     @required this.numOfBrands,
     @required this.press,
+    
+
   }) : super(key: key);
 
   final String category, image;
@@ -105,16 +109,16 @@ class SpecialOfferCard extends StatelessWidget {
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
                       colors: [
-                        Colors.purpleAccent[200],
-                        Colors.cyan.withOpacity(0.10),
-                      ],
+                        Colors.purple,
+                        Colors.purple.withOpacity(0.70),
+                      ], 
                     ),
                   ),
                 ),
                 Padding(
                   padding: EdgeInsets.symmetric(
-                    horizontal: getProportionateScreenWidth(6.0),
-                    vertical: getProportionateScreenWidth(6),
+                    horizontal: getProportionateScreenWidth(15.0),
+                    vertical: getProportionateScreenWidth(20),
                   ),
                   child: Text.rich(
                     TextSpan(
