@@ -109,16 +109,16 @@ class SpecialOfferCard extends StatelessWidget {
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
                       colors: [
-                        Colors.purpleAccent[200],
-                        kMainPrimaryColor.withOpacity(0.10),
+                        Colors.purple,
+                        Colors.purple.withOpacity(0.70),
                       ],
                     ),
                   ),
                 ),
                 Padding(
                   padding: EdgeInsets.symmetric(
-                    horizontal: getProportionateScreenWidth(6.0),
-                    vertical: getProportionateScreenWidth(6),
+                    horizontal: getProportionateScreenWidth(15.0),
+                    vertical: getProportionateScreenWidth(20),
                   ),
                   child: Text.rich(
                     TextSpan(
