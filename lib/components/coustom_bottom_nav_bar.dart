@@ -25,7 +25,7 @@ class CustomBottomNavBar extends StatelessWidget {
           BoxShadow(
             offset: Offset(0, -1),
             blurRadius: 20,
-            color: Colors.cyan,
+            color: kMainPrimaryColor,
           ),
         ],
         borderRadius: BorderRadius.only(
@@ -45,7 +45,7 @@ class CustomBottomNavBar extends StatelessWidget {
                       ? kPrimaryColor
                       : inActiveIconColor,
                 ),
-               /*  onPressed: () =>
+                /*  onPressed: () =>
                     Navigator.pushNamed(context, ProfileScreen.routeName),
               ), */
               ),
@@ -57,7 +57,7 @@ class CustomBottomNavBar extends StatelessWidget {
                 icon: SvgPicture.asset("assets/Chat bubble Icon.svg"),
                 onPressed: () {},
               ),
-               IconButton(
+              IconButton(
                 icon: SvgPicture.asset("assets/Chat bubble Icon.svg"),
                 onPressed: () {},
               ),
@@ -73,7 +73,6 @@ class CustomBottomNavBar extends StatelessWidget {
               /*   onPressed: () =>
                     Navigator.pushNamed(context, ProfileScreen.routeName),
               ), */
-              
             ],
           )),
     );

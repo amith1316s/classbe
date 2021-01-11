@@ -1,3 +1,4 @@
+import 'package:classbe/constants.dart';
 import 'package:classbe/screens/home/components/menu.dart';
 import 'package:flutter/material.dart';
 import 'package:classbe/components/coustom_bottom_nav_bar.dart';
@@ -20,12 +21,13 @@ class HomeScreen extends StatelessWidget {
                 onTap: () {},
                 child: Icon(
                   Icons.home_rounded,
-                  color: Colors.cyan,
+                  color: kMainPrimaryColor,
                   size: 30.0,
                 ),
-                
               )),
-              SizedBox(width: 30.0,),
+          SizedBox(
+            width: 30.0,
+          ),
         ],
       ),
       drawer: Menu(),

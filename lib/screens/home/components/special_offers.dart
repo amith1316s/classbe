@@ -1,3 +1,5 @@
+import 'package:classbe/constants.dart';
+import 'package:classbe/screens/calender/calender.dart';
 import 'package:flutter/material.dart';
 
 import '../../../size_config.dart';
@@ -40,10 +42,11 @@ class SpecialOffers extends StatelessWidget {
               SizedBox(width: getProportionateScreenWidth(20)),
             ],
           ),
-          
         ),
-        SizedBox(height: 40.0,),
-         SingleChildScrollView(
+        SizedBox(
+          height: 40.0,
+        ),
+        SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
             children: [
@@ -51,10 +54,12 @@ class SpecialOffers extends StatelessWidget {
                 image: "assets/cal.png",
                 category: "Calender",
                 numOfBrands: 18,
-                press: () {},
+                press: () {
+                  Navigator.of(context).pushNamed(Calender.routeName);
+                },
               ),
               SpecialOfferCard(
-               image: "assets/subscription.png",
+                image: "assets/subscription.png",
                 category: "My Subscriptions",
                 numOfBrands: 24,
                 press: () {},
@@ -62,7 +67,6 @@ class SpecialOffers extends StatelessWidget {
               SizedBox(width: getProportionateScreenWidth(20)),
             ],
           ),
-          
         ),
       ],
     );
@@ -106,7 +110,7 @@ class SpecialOfferCard extends StatelessWidget {
                       end: Alignment.bottomCenter,
                       colors: [
                         Colors.purpleAccent[200],
-                        Colors.cyan.withOpacity(0.10),
+                        kMainPrimaryColor.withOpacity(0.10),
                       ],
                     ),
                   ),
@@ -127,7 +131,7 @@ class SpecialOfferCard extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                       // TextSpan(text: "$numOfBrands Brands")
+                        // TextSpan(text: "$numOfBrands Brands")
                       ],
                     ),
                   ),

@@ -21,15 +21,15 @@ class Body extends StatelessWidget {
             HomeHeader(),
             SizedBox(height: getProportionateScreenWidth(0.5)),
             DiscountBanner(),
-            //Categories(),
-            
-              SpecialOffers(),
-             SizedBox(height: getProportionateScreenWidth(30)),
-            //PopularProducts(), 
-             //SizedBox(height: getProportionateScreenWidth(30)), 
+            // Categories(),
+
+            SpecialOffers(),
+            SizedBox(height: getProportionateScreenWidth(30)),
+            // PopularProducts(),
+            //SizedBox(height: getProportionateScreenWidth(30)),
           ],
         ),
       ),
     );
   }
-}  
+}
